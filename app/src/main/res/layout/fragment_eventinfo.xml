@@ -64,19 +64,16 @@
                     android:layout_marginRight="10dp"
                     android:scrollbars="horizontal" />
 
-                <EditText
-                    android:id="@+id/memoEt"
+                <TextView
+                    android:id="@+id/memoTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginRight="10dp"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:minHeight="200dp"
                     android:gravity="top|left"
-                    android:background="@null"
-                    android:text="메모 추가 (자유)" />
+                    android:text="메모 내용"
+                    android:textSize="20sp" />
 
                 <Button
                     android:id="@+id/recommBtn"
