@@ -11,9 +11,16 @@
         <action
             android:id="@+id/action_calendarFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_calendarFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/notificationFragment"
         android:name="com.umc.bondingwizards.presentation.activity.NotificationFragment"
         android:label="NotificationFragment" />
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.umc.bondingwizards.presentation.activity.ListFragment"
+        android:label="ListFragment" />
 </navigation>

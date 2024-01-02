@@ -16,7 +16,8 @@ class CalendarFragment: BindingFragment<FragmentCalendarBinding>(R.layout.fragme
 
         binding.btnToolbarNoti.setOnClickListener {
             findNavController().navigate(
-                R.id.action_calendarFragment_to_notificationFragment
+                R.id.action_calendarFragment_to_listFragment //테스트용
+                //R.id.action_calendarFragment_to_notificationFragment
             )
         }
     }
