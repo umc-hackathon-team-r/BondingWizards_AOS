@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+
+    <!-- Foundation Color -->
+    <!-- UI Depth 를 표현하기 위한 기본 컬러 -->
     <color name="white">#FFFFFFFF</color>
+    <color name="gray_1">#FCFCFD</color>
+    <color name="gray_2">#F0F5F8</color>
+    <color name="gray_3">#EAEFF1</color>
+    <color name="gray_4">#C1C6CA</color>
+    <color name="gray_5">#889197</color>
+    <color name="gray_6">#49535A</color>
+    <color name="gray_7">#323B41</color>
+    <color name="gray_8">#212729</color>
+
+    <!-- Component Color -->
+    <!-- Component 에 쓰이는 컬러 -->
+    <color name="icon">#949494</color>
+    <color name="divider">#F0F5F8</color>
+    <color name="line">#F0F5F8</color>
+    <color name="text">#212729</color>
+    <color name="error">#B70000</color>
+    <color name="warning">#D2712A</color>
+    <color name="success">#00970F</color>
 </resources>
