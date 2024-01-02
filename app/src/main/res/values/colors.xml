@@ -14,6 +14,11 @@
     <color name="gray_7">#323B41</color>
     <color name="gray_8">#212729</color>
 
+    <color name="main">#323B49</color>
+    <color name="sub">#4B7095</color>
+    <color name="sub2">#CFDDEF</color>
+    <color name="sub3">#EAF3FD</color>
+
     <!-- Component Color -->
     <!-- Component 에 쓰이는 컬러 -->
     <color name="icon">#949494</color>
