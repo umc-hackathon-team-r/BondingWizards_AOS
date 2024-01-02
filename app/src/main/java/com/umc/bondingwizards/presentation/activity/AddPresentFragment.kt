@@ -1,21 +1,20 @@
 package com.umc.bondingwizards.presentation.activity
+
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.umc.bondingwizards.R
-import com.umc.bondingwizards.databinding.FragmentFriendListBinding
-import com.umc.bondingwizards.databinding.FragmentPresentListBinding
+import com.umc.bondingwizards.databinding.FragmentAddPresentBinding
 import com.umc.bondingwizards.domain.viewmodel.ListViewModel
 import com.umc.bondingwizards.presentation.adapter.FriendListAdapter
 import com.umc.bondingwizards.utils.binding.BindingFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class ListPresentFragment: BindingFragment<FragmentPresentListBinding>(R.layout.fragment_present_list) {
+class AddPresentFragment: BindingFragment<FragmentAddPresentBinding>(R.layout.fragment_add_present) {
 
     private val viewModel: ListViewModel by activityViewModels()
 
@@ -27,14 +26,11 @@ class ListPresentFragment: BindingFragment<FragmentPresentListBinding>(R.layout.
 
         setRecyclerView()
 
-        binding.fabAdd.setOnClickListener {
-            parentFragmentManager.beginTransaction().replace(R.id.fl_list,AddPresentFragment()).commit()
-        }
     }
 
     private fun setRecyclerView() {
         val friendAdapter = FriendListAdapter(viewModel)
-        binding.rvPresentList.apply {
+        binding.rvFriendList.apply {
             adapter = friendAdapter
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         }
@@ -45,5 +41,4 @@ class ListPresentFragment: BindingFragment<FragmentPresentListBinding>(R.layout.
             }
         }
     }
-
 }
