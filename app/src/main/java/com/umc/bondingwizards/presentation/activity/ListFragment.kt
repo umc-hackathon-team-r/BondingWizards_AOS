@@ -36,9 +36,6 @@ class ListFragment: BindingFragment<FragmentListBinding>(R.layout.fragment_list)
             viewModel.changeListState(ListItem.FRIEND)
         }
 
-        binding.btnToolbarBack.setOnClickListener {
-            onBackPressed()
-        }
 
         viewModel.listState.observe(viewLifecycleOwner) {
             viewLifecycleOwner.lifecycleScope.launch {

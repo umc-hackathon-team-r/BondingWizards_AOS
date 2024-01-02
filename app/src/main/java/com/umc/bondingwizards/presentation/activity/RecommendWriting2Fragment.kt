@@ -30,7 +30,6 @@ class RecommendWriting2Fragment : BindingFragment<FragmentRecommandWriting2Bindi
             } else {
 
             }
-            Toast.makeText(context,"클릭한 버튼: $buttonText", Toast.LENGTH_SHORT).show()
         }
 
 

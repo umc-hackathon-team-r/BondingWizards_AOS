@@ -8,6 +8,7 @@ import com.prolificinteractive.materialcalendarview.DayViewDecorator
 import com.prolificinteractive.materialcalendarview.DayViewFacade
 import com.prolificinteractive.materialcalendarview.format.DateFormatTitleFormatter
 import com.prolificinteractive.materialcalendarview.format.TitleFormatter
+import com.umc.bondingwizards.R
 import dagger.hilt.android.AndroidEntryPoint
 import com.umc.bondingwizards.databinding.FragmentCalendarBinding
 import com.umc.bondingwizards.utils.binding.BindingFragment
@@ -25,7 +26,11 @@ class CalendarFragment: BindingFragment<FragmentCalendarBinding>(com.umc.bonding
 
         val disabledDates = hashSetOf<CalendarDay>()
         disabledDates.add(CalendarDay.from(2022, 7, 12))
-
+        binding.btnToolbarNoti.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_calendarFragment_to_notificationFragment
+            )
+        }
         binding.calendarView.apply {
             // 휴무일 지정을 위한 Decorator 설정
             addDecorator(DayDisableDecorator(disabledDates, today))

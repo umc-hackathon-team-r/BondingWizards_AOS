@@ -27,7 +27,6 @@ class ListPresentFragment: BindingFragment<FragmentPresentListBinding>(R.layout.
         binding.lifecycleOwner = viewLifecycleOwner
 
         setRecyclerView()
-        viewModel.examplePresentList()
         binding.fabAdd.setOnClickListener {
             parentFragmentManager.beginTransaction().replace(R.id.fl_list,AddPresentFragment()).commit()
         }

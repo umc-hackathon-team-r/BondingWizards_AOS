@@ -24,7 +24,6 @@ class ListFriendFragment: BindingFragment<FragmentFriendListBinding>(R.layout.fr
         binding.executePendingBindings()
         binding.lifecycleOwner = viewLifecycleOwner
 
-        viewModel.exampleFriendList() //테스트용
         setRecyclerView()
         Log.d("TEST Recycler","${viewModel.friendList.value}")
 
