@@ -15,7 +15,6 @@
             android:id="@+id/eventIv"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@tools:sample/avatars"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
