@@ -27,14 +27,14 @@
                 android:layout_height="7dp"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="2dp"
-                android:src="@drawable/ic_indicator_selector"/>
+                android:src="@drawable/ic_indicator_after"/>
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
                 android:layout_width="0dp"
                 android:layout_height="7dp"
                 android:layout_weight="1"
                 android:layout_marginHorizontal="2dp"
-                android:src="@drawable/ic_indicator_before"/>
+                android:src="@drawable/ic_indicator_selector"/>
 
             <androidx.constraintlayout.utils.widget.ImageFilterView
                 android:layout_width="0dp"
@@ -45,11 +45,21 @@
 
         </LinearLayout>
 
+        <androidx.constraintlayout.utils.widget.ImageFilterButton
+            android:id="@+id/btn_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_back_arrow"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
         <TextView
             android:id="@+id/tv_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="이벤트 유형을 선택해주세요"
+            android:text="편지의 분위기를 선택하세요."
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -63,7 +73,7 @@
             android:id="@+id/tv_relation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="(복수선택 불가능)"
+            android:text="(복수선택 가능)"
             android:textColor="@color/gray_5"
             android:textSize="14sp"
             android:textStyle="bold"

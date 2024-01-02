@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_write"
+    app:startDestination="@id/recommendWritingFragment">
+
+    <fragment
+        android:id="@+id/recommendWriting2Fragment"
+        android:name="com.umc.bondingwizards.presentation.activity.RecommendWriting2Fragment"
+        android:label="RecommendWriting2Fragment" >
+        <action
+            android:id="@+id/action_recommendWriting2Fragment_to_recommendWriting3Fragment2"
+            app:destination="@id/recommendWriting3Fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendWritingFragment"
+        android:name="com.umc.bondingwizards.presentation.activity.RecommendWritingFragment"
+        android:label="RecommendWritingFragment" >
+        <action
+            android:id="@+id/action_recommendWritingFragment_to_recommendWriting2Fragment"
+            app:destination="@id/recommendWriting2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendWriting3Fragment2"
+        android:name="com.umc.bondingwizards.presentation.activity.RecommendWriting3Fragment"
+        android:label="RecommendWriting3Fragment" />
+</navigation>
