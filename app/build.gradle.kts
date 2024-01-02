@@ -45,6 +45,7 @@ android {
     }
     buildFeatures {
         dataBinding = true
+        viewBinding = true
     }
 }
 
@@ -88,4 +89,6 @@ dependencies {
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
+
+    implementation("com.github.prolificinteractive:material-calendarview:2.0.0")
 }
