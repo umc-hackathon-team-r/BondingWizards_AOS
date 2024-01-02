@@ -13,5 +13,11 @@
             android:id="@+id/toolbar"
             layout="@layout/item_toolbar"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_noti_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
