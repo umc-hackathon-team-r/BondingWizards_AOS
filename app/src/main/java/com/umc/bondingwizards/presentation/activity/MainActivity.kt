@@ -3,8 +3,6 @@ package com.umc.bondingwizards.presentation.activity
 import android.Manifest
 import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.normal.TedPermission
