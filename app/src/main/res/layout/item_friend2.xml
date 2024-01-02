@@ -18,7 +18,7 @@
         android:layout_marginVertical="4dp"
         android:paddingHorizontal="12dp"
         android:paddingVertical="8dp"
-        android:background="@drawable/shape_line_btn_round_4">
+        android:background="@drawable/shape_line_btn_round_4_2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
