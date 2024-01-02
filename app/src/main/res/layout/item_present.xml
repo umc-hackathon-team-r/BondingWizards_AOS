@@ -4,8 +4,8 @@
 
     <data>
         <variable
-            name="friend"
-            type="com.umc.bondingwizards.domain.model.Friend" />
+            name="present"
+            type="com.umc.bondingwizards.domain.model.Present" />
         <variable
             name="vm"
             type="com.umc.bondingwizards.domain.viewmodel.ListViewModel" />
@@ -41,9 +41,10 @@
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{friend.name}"
+                android:text="@{present.title}"
                 android:textColor="@color/text"
                 android:textSize="@dimen/text_xl"
+                android:layout_marginStart="8dp"
                 app:layout_constraintStart_toEndOf="@id/iv"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent">
@@ -51,13 +52,13 @@
             </TextView>
 
             <TextView
-                android:id="@+id/tv_birth"
+                android:id="@+id/tv_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{friend.birth}"
+                android:text="@{present.price}"
                 android:textColor="@color/gray_5"
                 android:textSize="@dimen/text_sm"
-                app:layout_constraintStart_toEndOf="@id/iv"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
