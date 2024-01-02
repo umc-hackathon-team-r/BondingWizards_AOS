@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+<!--        <variable-->
+<!--            name="present"-->
+<!--            type="com.umc.bondingwizards.domain.model.Present" />-->
+        <variable
+            name="vm"
+            type="com.umc.bondingwizards.domain.viewmodel.ListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
