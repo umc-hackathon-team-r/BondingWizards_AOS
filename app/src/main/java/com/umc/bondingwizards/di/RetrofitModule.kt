@@ -2,6 +2,9 @@ package com.naze.common.di
 
 import com.google.gson.GsonBuilder
 import com.umc.bondingwizards.data.remote.api.DummyApi
+import com.umc.bondingwizards.data.remote.api.EventApi
+import com.umc.bondingwizards.data.remote.api.FriendApi
+import com.umc.bondingwizards.data.remote.api.PresentApi
 import com.umc.bondingwizards.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -26,14 +29,38 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideApiService(): DummyApi {
+    fun provideApiService(): EventApi {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             //.client(okHttpClient(AppInterceptor())) //Interceptor 필요할 때
             .build()
-            .create(DummyApi::class.java)
+            .create(EventApi::class.java)
     }
+
+    @Provides
+    @Singleton
+    fun providePresentApiService(): PresentApi {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            //.client(okHttpClient(AppInterceptor())) //Interceptor 필요할 때
+            .build()
+            .create(PresentApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideFriendApiService():FriendApi {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            //.client(okHttpClient(AppInterceptor())) //Interceptor 필요할 때
+            .build()
+            .create(FriendApi::class.java)
+    }
+
+
 
 
     @Provides
