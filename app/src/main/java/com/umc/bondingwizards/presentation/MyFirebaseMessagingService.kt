@@ -31,13 +31,13 @@ class MyFirebaseMessagingService: FirebaseMessagingService()  {
 
         createNotificationChannel()
 
-        val title = message.data["title"]
-        val message = message.data["body"]
+        val title = message.notification?.title
+        val body = message.notification?.body
 
         val notificationBuilder = NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_noti)
             .setContentTitle(title)
-            .setContentText(message)
+            .setContentText(body)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
         if (ActivityCompat.checkSelfPermission(
