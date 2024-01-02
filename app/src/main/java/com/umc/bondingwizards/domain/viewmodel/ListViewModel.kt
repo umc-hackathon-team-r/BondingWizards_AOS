@@ -25,8 +25,8 @@ class ListViewModel @Inject constructor(
 
     fun exampleFriendList() {
         val list = mutableListOf<Friend>()
-        list.add(Friend("김지송","2000-12-26"))
-        list.add(Friend("김지송2","2001-01-07"))
+        list.add(Friend(1,"김지송","2000-12-26"))
+        list.add(Friend(2,"김지송2","2001-01-07"))
         _friendList.value = list
     }
 

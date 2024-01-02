@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_listFriendFragment_to_listPresentFragment"
             app:destination="@id/listPresentFragment" />
+        <action
+            android:id="@+id/action_listFriendFragment_to_addFriendFragment"
+            app:destination="@id/addFriendFragment" />
     </fragment>
     <fragment
         android:id="@+id/listPresentFragment"
@@ -19,5 +22,16 @@
         <action
             android:id="@+id/action_listPresentFragment_to_listFriendFragment"
             app:destination="@id/listFriendFragment" />
+        <action
+            android:id="@+id/action_listPresentFragment_to_addPresentFragment"
+            app:destination="@id/addPresentFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addFriendFragment"
+        android:name="com.umc.bondingwizards.presentation.activity.AddFriendFragment"
+        android:label="AddFriendFragment" />
+    <fragment
+        android:id="@+id/addPresentFragment"
+        android:name="com.umc.bondingwizards.presentation.activity.AddPresentFragment"
+        android:label="AddPresentFragment" />
 </navigation>
