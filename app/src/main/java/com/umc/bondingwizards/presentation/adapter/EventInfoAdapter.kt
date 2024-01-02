@@ -2,30 +2,42 @@ package com.umc.bondingwizards.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.umc.bondingwizards.databinding.ItemEventPresentBinding
+import com.umc.bondingwizards.domain.model.Friend   // 추후 Friend -> Present로 바꾸기
+import com.umc.bondingwizards.domain.viewmodel.ListViewModel
+import com.umc.bondingwizards.utils.ItemDiffCallback
 
-class EventInfoAdapter() : RecyclerView.Adapter<EventInfoAdapter.EventInfoViewHolder>() {
+class EventInfoAdapter(private val viewModel: ListViewModel) : ListAdapter<Friend, RecyclerView.ViewHolder>( // 추후 Friend -> Present로 바꾸기
+    ItemDiffCallback<Friend>( // 추후 Friend -> Present로 바꾸기
+        onContentsTheSame = {old, new -> old == new},
+        onItemsTheSame = {old, new -> old.name == new.name}
+    )
+) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventInfoViewHolder {
-        val itemBinding: ItemEventPresentBinding = ItemEventPresentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return EventInfoViewHolder(itemBinding)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        return EventInfoViewHolder(ItemEventPresentBinding.inflate(inflater, parent, false))
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val item = getItem(position)
 
-    override fun onBindViewHolder(holder: EventInfoViewHolder, position: Int) {
-        holder.itemView.setOnClickListener{
-
+        when(holder){
+            is EventInfoViewHolder -> {
+//                holder.bind(item)
+            }
         }
     }
 
-    class EventInfoViewHolder(
-        private val itemBinding: ItemEventPresentBinding)
-        : RecyclerView.ViewHolder(itemBinding.root){
-
+    inner class EventInfoViewHolder(
+        private val itemBinding: ItemEventPresentBinding
+    ) : RecyclerView.ViewHolder(itemBinding.root) {
+//          fun bind(item: Present)  {
+//              itemBinding.present = item
+//              itemBinding.vm = viewModel
+//          }
         }
 
 }
