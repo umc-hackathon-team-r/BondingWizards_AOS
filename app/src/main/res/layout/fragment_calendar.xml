@@ -35,5 +35,16 @@
         <!--
             여기에 캘린더 뷰 작성
         -->
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="44dp"
+            app:mcv_selectionColor="#00F"
+            app:mcv_weekDayTextAppearance="@style/TextStyleSemiBold15"
+            app:mcv_showOtherDates="all" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
