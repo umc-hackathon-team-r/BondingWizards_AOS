@@ -10,8 +10,10 @@ import com.umc.bondingwizards.R
 import com.umc.bondingwizards.databinding.FragmentListBinding
 import com.umc.bondingwizards.domain.type.ListItem
 import com.umc.bondingwizards.domain.viewmodel.ListViewModel
+import com.umc.bondingwizards.presentation.adapter.FriendListAdapter
 import com.umc.bondingwizards.utils.binding.BindingFragment
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
@@ -38,10 +40,13 @@ class ListFragment: BindingFragment<FragmentListBinding>(R.layout.fragment_list)
                 Log.d("Switch Text", childFragmentManager.fragments.toString())
                 when (it) {
                     ListItem.FRIEND -> {
-                        childFragmentManager.beginTransaction().replace(R.id.fl_list, ListFriendFragment()).commit()
+                        childFragmentManager.beginTransaction()
+                            .replace(R.id.fl_list, ListFriendFragment()).commit()
                     }
+
                     ListItem.PRESENT -> {
-                        childFragmentManager.beginTransaction().replace(R.id.fl_list, ListPresentFragment()).commit()
+                        childFragmentManager.beginTransaction()
+                            .replace(R.id.fl_list, ListPresentFragment()).commit()
                     }
                 }
             }
