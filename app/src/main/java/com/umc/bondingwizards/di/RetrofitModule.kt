@@ -1,9 +1,8 @@
 package com.naze.common.di
 
 import com.google.gson.GsonBuilder
-import com.naze.common.App
-import com.naze.common.data.remote.api.DummyApi
-import com.naze.common.utils.Constants.BASE_URL
+import com.umc.bondingwizards.data.remote.api.DummyApi
+import com.umc.bondingwizards.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,4 +1,4 @@
-package com.naze.common.data.local.dao
+package com.umc.bondingwizards.data.local.dao
 
 /** Local Data Access Object */
 interface DummyDao {

@@ -1,4 +1,4 @@
-package com.naze.common
+package com.umc.bondingwizards
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

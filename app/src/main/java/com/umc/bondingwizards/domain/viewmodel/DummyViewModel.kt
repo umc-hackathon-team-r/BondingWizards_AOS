@@ -1,4 +1,4 @@
-package com.naze.common.domain.viewmodel
+package com.umc.bondingwizards.domain.viewmodel
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

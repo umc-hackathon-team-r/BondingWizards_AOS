@@ -1,4 +1,4 @@
-package com.naze.common.domain.type
+package com.umc.bondingwizards.domain.type
 
 enum class DummyType {
 }

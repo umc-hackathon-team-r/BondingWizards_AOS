@@ -1,4 +1,4 @@
-package com.naze.common.domain.model
+package com.umc.bondingwizards.domain.model
 
 data class DummyModel(
     val dummy: String

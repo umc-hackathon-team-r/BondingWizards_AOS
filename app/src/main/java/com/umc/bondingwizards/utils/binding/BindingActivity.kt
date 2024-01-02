@@ -1,4 +1,4 @@
-package com.naze.common.utils.binding
+package com.umc.bondingwizards.utils.binding
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

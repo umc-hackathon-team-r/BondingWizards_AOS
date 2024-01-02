@@ -1,4 +1,4 @@
-package com.naze.common.domain.repository
+package com.umc.bondingwizards.domain.repository
 
 interface DummyRepository {
 }

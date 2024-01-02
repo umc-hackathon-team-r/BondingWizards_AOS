@@ -1,4 +1,4 @@
-package com.naze.common.data.local.model
+package com.umc.bondingwizards.data.local.model
 
 /** 로컬에서 사용하는 데이터 모델 폴더 */
 data class DummyModel(

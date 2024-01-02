@@ -1,6 +1,5 @@
-package com.naze.common.utils
+package com.umc.bondingwizards.utils
 
-import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri

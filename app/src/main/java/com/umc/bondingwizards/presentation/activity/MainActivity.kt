@@ -1,12 +1,11 @@
 package com.naze.common.presentation.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import com.naze.common.R
 import com.naze.common.databinding.ActivityMainBinding
-import com.naze.common.domain.viewmodel.DummyViewModel
-import com.naze.common.utils.binding.BindingActivity
+import com.umc.bondingwizards.domain.viewmodel.DummyViewModel
+import com.umc.bondingwizards.utils.binding.BindingActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
