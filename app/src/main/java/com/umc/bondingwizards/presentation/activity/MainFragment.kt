@@ -21,6 +21,7 @@ class MainFragment: BindingFragment<FragmentMainBinding>(R.layout.fragment_main)
         activity?.supportFragmentManager!!.beginTransaction()
             .replace(R.id.main_fm, CalendarFragment())
             .commitAllowingStateLoss()
+        binding.mainBottomNav.selectedItemId = R.id.calendar_nav
 //        getSharedPreferences("a", AppCompatActivity.MODE_PRIVATE)
         binding.mainBottomNav.setOnItemSelectedListener { item ->
             when(item.itemId){

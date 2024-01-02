@@ -26,11 +26,14 @@ class ListViewModel @Inject constructor(
     fun changeListState(item: ListItem) {
         _listState.value = item
     }
+    init {
+        exampleFriendList()
+        examplePresentList()
+    }
 
     fun exampleFriendList() {
         val list = mutableListOf<Friend>()
         list.add(Friend(1,"김지송","2000-12-26"))
-        list.add(Friend(2,"김지송2",))
         _friendList.value = list
     }
 
@@ -38,6 +41,18 @@ class ListViewModel @Inject constructor(
         val list = mutableListOf<Present>()
         list.add(Present())
         list.add(Present())
+        _presentList.value = list
+    }
+
+    fun addFriend(item: Friend) {
+        val list = _friendList.value?.toMutableList()?: mutableListOf()
+        list.add((item))
+        _friendList.value = list
+    }
+
+    fun addPresent(item: Present) {
+        val list = _presentList.value?.toMutableList()?: mutableListOf()
+        list.add(item)
         _presentList.value = list
     }
 
