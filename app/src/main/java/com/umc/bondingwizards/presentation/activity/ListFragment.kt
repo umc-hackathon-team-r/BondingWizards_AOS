@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.umc.bondingwizards.R
 import com.umc.bondingwizards.databinding.FragmentListBinding
@@ -35,6 +36,7 @@ class ListFragment: BindingFragment<FragmentListBinding>(R.layout.fragment_list)
             viewModel.changeListState(ListItem.FRIEND)
         }
 
+
         viewModel.listState.observe(viewLifecycleOwner) {
             viewLifecycleOwner.lifecycleScope.launch {
                 Log.d("Switch Text", childFragmentManager.fragments.toString())
@@ -51,5 +53,10 @@ class ListFragment: BindingFragment<FragmentListBinding>(R.layout.fragment_list)
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        findNavController().popBackStack()
     }
 }

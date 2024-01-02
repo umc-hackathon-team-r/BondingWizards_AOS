@@ -4,6 +4,7 @@ plugins {
     id("kotlin-kapt")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -90,5 +91,14 @@ dependencies {
     implementation ("com.github.bumptech.glide:glide:4.11.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.11.0")
 
+
+    implementation ("com.google.android.flexbox:flexbox:3.0.0")
+
+    //FCM
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-messaging-ktx:23.4.0")
+
+    //Calendar
     implementation("com.github.prolificinteractive:material-calendarview:2.0.0")
 }

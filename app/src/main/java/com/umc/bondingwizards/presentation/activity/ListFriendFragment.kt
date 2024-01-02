@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.umc.bondingwizards.R
 import com.umc.bondingwizards.databinding.FragmentFriendListBinding
@@ -23,9 +24,12 @@ class ListFriendFragment: BindingFragment<FragmentFriendListBinding>(R.layout.fr
         binding.executePendingBindings()
         binding.lifecycleOwner = viewLifecycleOwner
 
-        viewModel.exampleFriendList() //테스트용
         setRecyclerView()
         Log.d("TEST Recycler","${viewModel.friendList.value}")
+
+        binding.fabAdd.setOnClickListener {
+            parentFragmentManager.beginTransaction().replace(R.id.fl_list,AddFriendFragment()).commit()
+        }
     }
 
     private fun setRecyclerView() {

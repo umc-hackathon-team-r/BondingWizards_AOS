@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">BondingWizards</string>
     <string name="notification">알림</string>
+
+    <string name="test">"친구야! 생일 축하해! 새로운 한 살이 시작되는 오늘, 네게는 행복이 가득하길 바라고, 더 많은 웃음과 좋은 일들이 너를 찾아가길 기대해. 함께 보낸 순간들은 항상 소중하고, 앞으로도 더 많은 특별한 순간들이 우리를 기다리고 있을 거야. 건강하게 행복한 생일을 보내길 바라며! 🎉🎂"</string>
 </resources>
