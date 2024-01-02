@@ -11,6 +11,7 @@ import com.umc.bondingwizards.databinding.FragmentFriendListBinding
 import com.umc.bondingwizards.databinding.FragmentPresentListBinding
 import com.umc.bondingwizards.domain.viewmodel.ListViewModel
 import com.umc.bondingwizards.presentation.adapter.FriendListAdapter
+import com.umc.bondingwizards.presentation.adapter.PresentListAdapter
 import com.umc.bondingwizards.utils.binding.BindingFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,22 +27,22 @@ class ListPresentFragment: BindingFragment<FragmentPresentListBinding>(R.layout.
         binding.lifecycleOwner = viewLifecycleOwner
 
         setRecyclerView()
-
+        viewModel.examplePresentList()
         binding.fabAdd.setOnClickListener {
             parentFragmentManager.beginTransaction().replace(R.id.fl_list,AddPresentFragment()).commit()
         }
     }
 
     private fun setRecyclerView() {
-        val friendAdapter = FriendListAdapter(viewModel)
+        val presentAdapter = PresentListAdapter(viewModel)
         binding.rvPresentList.apply {
-            adapter = friendAdapter
+            adapter = presentAdapter
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         }
 
-        viewModel.friendList.observe(viewLifecycleOwner) {
+        viewModel.presentList.observe(viewLifecycleOwner) {
             viewLifecycleOwner.lifecycleScope.launch (Dispatchers.Main) {
-                friendAdapter.submitList(it)
+                presentAdapter.submitList(it)
             }
         }
     }
