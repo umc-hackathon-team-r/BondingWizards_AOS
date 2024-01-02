@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_list"
+    app:startDestination="@id/listFriendFragment">
+
+    <fragment
+        android:id="@+id/listFriendFragment"
+        android:name="com.umc.bondingwizards.presentation.activity.ListFriendFragment"
+        android:label="ListFriendFragment" >
+        <action
+            android:id="@+id/action_listFriendFragment_to_listPresentFragment"
+            app:destination="@id/listPresentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listPresentFragment"
+        android:name="com.umc.bondingwizards.presentation.activity.ListPresentFragment"
+        android:label="ListPresentFragment" >
+        <action
+            android:id="@+id/action_listPresentFragment_to_listFriendFragment"
+            app:destination="@id/listFriendFragment" />
+    </fragment>
+</navigation>
